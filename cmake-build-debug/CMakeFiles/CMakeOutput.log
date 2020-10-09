@@ -1,0 +1,432 @@
+The target system is: Linux -  - arm
+The host system is: Linux - 4.15.0-118-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc 
+Build flags: -march=armv7-a;-static;-DARM
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/xt/raw-socket/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/xt/raw-socket/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d2829/fast && /usr/bin/make -f CMakeFiles/cmTC_d2829.dir/build.make CMakeFiles/cmTC_d2829.dir/build
+make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2829.dir/testCCompiler.c.o
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc   -march=armv7-a -static -DARM    -o CMakeFiles/cmTC_d2829.dir/testCCompiler.c.o   -c /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d2829
+/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2829.dir/link.txt --verbose=1
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc -march=armv7-a -static -DARM     -rdynamic CMakeFiles/cmTC_d2829.dir/testCCompiler.c.o  -o cmTC_d2829 
+make[1]: Leaving directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_23a69/fast && /usr/bin/make -f CMakeFiles/cmTC_23a69.dir/build.make CMakeFiles/cmTC_23a69.dir/build
+make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc   -march=armv7-a -static -DARM    -v -o CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o   -c /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc
+Target: arm-linux-gnueabihf
+Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Linaro GCC 7.5-2019.12) 
+COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -iprefix /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/ -isysroot /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc -D ARM /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=armv7-a -mtune=cortex-a9 -mfloat-abi=hard -mfpu=vfpv3-d16 -mthumb -mtls-dialect=gnu -auxbase-strip CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc0WXLja.s
+GNU C11 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.4, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include
+End of search list.
+GNU C11 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.4, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 8fa34e0db50fda66edde212215c67406
+COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -meabi=5 -o CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o /tmp/cc0WXLja.s
+GNU assembler version 2.28.2 (arm-linux-gnueabihf) using BFD version (Linaro_Binutils-2019.12) 2.28.2.20170706
+COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+Linking C executable cmTC_23a69
+/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23a69.dir/link.txt --verbose=1
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc -march=armv7-a -static -DARM    -v -rdynamic CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o  -o cmTC_23a69 
+Using built-in specs.
+COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc
+COLLECT_LTO_WRAPPER=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Linaro GCC 7.5-2019.12) 
+COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-rdynamic' '-o' 'cmTC_23a69' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2 -plugin /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so -plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9Vpw8e.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lc --sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc --build-id -Bstatic -X -m armelf_linux_eabi -o cmTC_23a69 /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbeginT.o -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0 -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o --start-group -lgcc -lgcc_eh -lc --end-group /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-rdynamic' '-o' 'cmTC_23a69' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+make[1]: Leaving directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include]
+  end of search list found
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/include]
+  implicit include dirs: [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_23a69/fast && /usr/bin/make -f CMakeFiles/cmTC_23a69.dir/build.make CMakeFiles/cmTC_23a69.dir/build]
+  ignore line: [make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc   -march=armv7-a -static -DARM    -v -o CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o   -c /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.5.0 (Linaro GCC 7.5-2019.12) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -iprefix /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/ -isysroot /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc -D ARM /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=armv7-a -mtune=cortex-a9 -mfloat-abi=hard -mfpu=vfpv3-d16 -mthumb -mtls-dialect=gnu -auxbase-strip CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc0WXLja.s]
+  ignore line: [GNU C11 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 8fa34e0db50fda66edde212215c67406]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -meabi=5 -o CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o /tmp/cc0WXLja.s]
+  ignore line: [GNU assembler version 2.28.2 (arm-linux-gnueabihf) using BFD version (Linaro_Binutils-2019.12) 2.28.2.20170706]
+  ignore line: [COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-o' 'CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [Linking C executable cmTC_23a69]
+  ignore line: [/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23a69.dir/link.txt --verbose=1]
+  ignore line: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc -march=armv7-a -static -DARM    -v -rdynamic CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o  -o cmTC_23a69 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.5.0 (Linaro GCC 7.5-2019.12) ]
+  ignore line: [COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=armv7-a' '-static' '-D' 'ARM' '-v' '-rdynamic' '-o' 'cmTC_23a69' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  link line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2 -plugin /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so -plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9Vpw8e.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lc --sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc --build-id -Bstatic -X -m armelf_linux_eabi -o cmTC_23a69 /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbeginT.o -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0 -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o --start-group -lgcc -lgcc_eh -lc --end-group /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o]
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9Vpw8e.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [--sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_23a69] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbeginT.o] ==> ignore
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib]
+    arg [CMakeFiles/cmTC_23a69.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc_eh]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/lib]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/lib]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/lib]
+  implicit libs: [gcc;c]
+  implicit dirs: [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/lib;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/lib;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_71aa1/fast && /usr/bin/make -f CMakeFiles/cmTC_71aa1.dir/build.make CMakeFiles/cmTC_71aa1.dir/build
+make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_71aa1.dir/testCXXCompiler.cxx.o
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++     -o CMakeFiles/cmTC_71aa1.dir/testCXXCompiler.cxx.o -c /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_71aa1
+/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71aa1.dir/link.txt --verbose=1
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++       -rdynamic CMakeFiles/cmTC_71aa1.dir/testCXXCompiler.cxx.o  -o cmTC_71aa1 
+make[1]: Leaving directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2e370/fast && /usr/bin/make -f CMakeFiles/cmTC_2e370.dir/build.make CMakeFiles/cmTC_2e370.dir/build
+make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++    -v -o CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -c /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++
+Target: arm-linux-gnueabihf
+Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Linaro GCC 7.5-2019.12) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -iprefix /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/ -isysroot /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc -D_GNU_SOURCE /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=armv7-a -mtune=cortex-a9 -mfloat-abi=hard -mfpu=vfpv3-d16 -mthumb -mtls-dialect=gnu -auxbase-strip CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccThC7U4.s
+GNU C++14 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.4, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/."
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"
+ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"
+ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/.
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include
+End of search list.
+GNU C++14 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 4.8.4, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 09c4458dd3b9a3a0ab3c0b9fc8f5d562
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -meabi=5 -o CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccThC7U4.s
+GNU assembler version 2.28.2 (arm-linux-gnueabihf) using BFD version (Linaro_Binutils-2019.12) 2.28.2.20170706
+COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+Linking CXX executable cmTC_2e370
+/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e370.dir/link.txt --verbose=1
+/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++      -v -rdynamic CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2e370 
+Using built-in specs.
+COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++
+COLLECT_LTO_WRAPPER=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Linaro GCC 7.5-2019.12) 
+COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2e370' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2 -plugin /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so -plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9RoXQa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_2e370 /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbegin.o -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0 -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2e370' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+make[1]: Leaving directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/.]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include]
+    add: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include]
+  end of search list found
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/.] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0/backward]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include]
+  collapse include dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/include]
+  implicit include dirs: [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include/c++/7.5.0/backward;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/include;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_2e370/fast && /usr/bin/make -f CMakeFiles/cmTC_2e370.dir/build.make CMakeFiles/cmTC_2e370.dir/build]
+  ignore line: [make[1]: Entering directory '/home/xt/raw-socket/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++    -v -o CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -c /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.5.0 (Linaro GCC 7.5-2019.12) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -iprefix /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/ -isysroot /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc -D_GNU_SOURCE /home/xt/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=armv7-a -mtune=cortex-a9 -mfloat-abi=hard -mfpu=vfpv3-d16 -mthumb -mtls-dialect=gnu -auxbase-strip CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccThC7U4.s]
+  ignore line: [GNU C++14 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/."]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/../../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [ignoring nonexistent directory "/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/.]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include]
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (Linaro GCC 7.5-2019.12) version 7.5.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.2  MPFR version 3.1.5  MPC version 1.0.3  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 09c4458dd3b9a3a0ab3c0b9fc8f5d562]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/as -v -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -meabi=5 -o CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccThC7U4.s]
+  ignore line: [GNU assembler version 2.28.2 (arm-linux-gnueabihf) using BFD version (Linaro_Binutils-2019.12) 2.28.2.20170706]
+  ignore line: [COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  ignore line: [Linking CXX executable cmTC_2e370]
+  ignore line: [/home/xt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e370.dir/link.txt --verbose=1]
+  ignore line: [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++      -v -rdynamic CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2e370 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/arm-linux-gnueabihf-c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: '/home/tcwg-buildslave/workspace/tcwg-make-release_1/snapshots/gcc.git~linaro-7.5-2019.12/configure' SHELL=/bin/bash --with-mpc=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libmudflap --enable-lto --enable-shared --without-included-gettext --enable-nls --with-system-zlib --disable-sjlj-exceptions --enable-gnu-unique-object --enable-linker-build-id --disable-libstdcxx-pch --enable-c99 --enable-clocale=gnu --enable-libstdcxx-debug --enable-long-long --with-cloog=no --with-ppl=no --with-isl=no --disable-multilib --with-float=hard --with-fpu=vfpv3-d16 --with-mode=thumb --with-tune=cortex-a9 --with-arch=armv7-a --enable-threads=posix --enable-multiarch --enable-libstdcxx-time=yes --enable-gnu-indirect-function --with-build-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/sysroots/arm-linux-gnueabihf --with-sysroot=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-checking=release --disable-bootstrap --enable-languages=c,c++,fortran,lto --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/home/tcwg-buildslave/workspace/tcwg-make-release_1/_build/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.5.0 (Linaro GCC 7.5-2019.12) ]
+  ignore line: [COMPILER_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib/:/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2e370' '-shared-libgcc' '-march=armv7-a' '-mtune=cortex-a9' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  link line: [ /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2 -plugin /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so -plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9RoXQa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_2e370 /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbegin.o -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0 -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib -L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o /home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o]
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../libexec/gcc/arm-linux-gnueabihf/7.5.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9RoXQa.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_2e370] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crt1.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crti.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtbegin.o] ==> ignore
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib]
+    arg [-L/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib] ==> dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib]
+    arg [CMakeFiles/cmTC_2e370.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/crtend.o] ==> ignore
+    arg [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib/crtn.o] ==> ignore
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/lib]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/lib]
+  collapse library dir [/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/lib] ==> [/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf/7.5.0;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc/arm-linux-gnueabihf;/home/xt/volte-attack/gcc-linaro-7.5.0/lib/gcc;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/lib;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/lib;/home/xt/volte-attack/gcc-linaro-7.5.0/arm-linux-gnueabihf/libc/usr/lib]
+  implicit fwks: []
+
+

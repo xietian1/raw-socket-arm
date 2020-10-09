@@ -1,0 +1,3 @@
+/home/xt/raw-socket/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/xt/raw-socket/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/xt/raw-socket/cmake-build-debug/CMakeFiles/raw-socket.dir

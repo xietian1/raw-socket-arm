@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="volte-attack"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xt/volte-attack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xt/volte-attack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/xt/volte-attack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ue_call_sim">
+				<Option output="/home/xt/volte-attack/cmake-build-debug/ue_call_sim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xt/volte-attack/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xt/volte-attack/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/."/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 ue_call_sim"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ue_call_sim/fast">
+				<Option output="/home/xt/volte-attack/cmake-build-debug/ue_call_sim" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xt/volte-attack/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xt/volte-attack/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/arm-linux-gnueabihf/."/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include/c++/7.5.0/backward"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include-fixed"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/home/xt/volte-attack/gcc-linaro-7.5.0/bin/../arm-linux-gnueabihf/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 ue_call_sim/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xt/volte-attack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xt/volte-attack/include/aes.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/dev.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/esp.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/hmac.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/net.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/replay.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/sha.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/sip.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/transport.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/include/utils.h">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/aes.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/dev.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/esp.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/hmac.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/main.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/net.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/replay.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/sha1.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/sip.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/transport.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/src/utils.c">
+			<Option target="ue_call_sim"/>
+		</Unit>
+		<Unit filename="/home/xt/volte-attack/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

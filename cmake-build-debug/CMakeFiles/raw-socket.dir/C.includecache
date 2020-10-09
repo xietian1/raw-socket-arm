@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xt/raw-socket/src/main2.c
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+string.h
+-
+unistd.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netinet/tcp.h
+-
+netinet/ip.h
+-
+netinet/ip6.h
+-
+
