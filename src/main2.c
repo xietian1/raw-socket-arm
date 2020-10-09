@@ -129,7 +129,7 @@ int main(int argc, char **argv) {
     //char *dstIP = "192.168.0.105";
 
     char *srcIP = "2600:380:5ef9:dab6:7476:58e6:c7e0:fc5b";
-    char *dstIP = "2600:380:5ef9:dab6:7476:58e6:c7e0:fc5b";
+    char *dstIP = "2001:1890:1f8:211e::1:2";
 
     int dstPort = 6000;
     int srcPort = 6401;
