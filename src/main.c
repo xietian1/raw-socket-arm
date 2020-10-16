@@ -47,7 +47,7 @@
 
 // Function prototypes
 uint16_t checksum (uint16_t *addr, int len);
-uint16_t tcp6_checksum (struct ip6_hdr, struct tcphdr, uint8_t *, int);
+uint16_t tcp6_checksum (struct ip6_hdr, struct tcphdr);
 char *allocate_strmem (int);
 uint8_t *allocate_ustrmem (int);
 int *allocate_intmem (int);
@@ -66,9 +66,6 @@ main (int argc, char **argv)
   struct ifreq ifr;
   void *tmp;
 
-  uint8_t *data;
-  int datalen;
-
   // Allocate memory for various arrays.
   src_mac = allocate_ustrmem (6);
   dst_mac = allocate_ustrmem (6);
@@ -78,7 +75,7 @@ main (int argc, char **argv)
   src_ip = allocate_strmem (INET6_ADDRSTRLEN);
   dst_ip = allocate_strmem (INET6_ADDRSTRLEN);
   tcp_flags = allocate_intmem (8);
-  data = allocate_strmem (IP_MAXPACKET);
+
   // Interface to send packet through.
   strcpy (interface, "rmnet_data1");
 
@@ -152,21 +149,9 @@ main (int argc, char **argv)
 
   // Fill out sockaddr_ll.
   device.sll_family = AF_PACKET;
-  device.sll_protocol = htons (ETH_P_IPV6);
+  device.sll_protocol = htons (ETH_P_IP);
   memcpy (device.sll_addr, src_mac, 6 * sizeof (uint8_t));
   device.sll_halen = htons(6);
-
-
-
-    //datalen = 1000;
-    data[0] = 'T';
-    data[1] = 'e';
-    data[2] = 's';
-    data[3] = 't';
-    data[4] = '/';
-    data[5] = 'n';
-    datalen = strlen (data);
-
 
   // IPv6 header
 
@@ -174,13 +159,13 @@ main (int argc, char **argv)
   iphdr.ip6_flow = htonl ((6 << 28) | (0 << 20) | 0);
 
   // Payload length (16 bits): TCP header
-  iphdr.ip6_plen = htons (TCP_HDRLEN + datalen);
+  iphdr.ip6_plen = htons (TCP_HDRLEN);
 
   // Next header (8 bits): 6 for TCP
   iphdr.ip6_nxt = IPPROTO_TCP;
 
   // Hop limit (8 bits): default to maximum value
-  iphdr.ip6_hops = 1;
+  iphdr.ip6_hops = 255;
 
   // Source IPv6 address (128 bits)
   if ((status = inet_pton (AF_INET6, src_ip, &(iphdr.ip6_src))) != 1) {
@@ -194,19 +179,16 @@ main (int argc, char **argv)
     exit (EXIT_FAILURE);
   }
 
-
-
-
   // TCP header
 
   // Source port number (16 bits)
-  tcphdr.th_sport = htons (6100);
+  tcphdr.th_sport = htons (6101);
 
   // Destination port number (16 bits)
-  tcphdr.th_dport = htons (32821);
+  tcphdr.th_dport = htons (6000);
 
   // Sequence number (32 bits)
-  tcphdr.th_seq = htonl (61320);
+  tcphdr.th_seq = htonl (0);
 
   // Acknowledgement number (32 bits): 0 in first packet of SYN/ACK process
   tcphdr.th_ack = htonl (0);
@@ -255,22 +237,18 @@ main (int argc, char **argv)
   tcphdr.th_urp = htons (0);
 
   // TCP checksum (16 bits)
-  tcphdr.th_sum = tcp6_checksum (iphdr, tcphdr, (uint8_t *) data, datalen);
+  tcphdr.th_sum = tcp6_checksum (iphdr, tcphdr);
 
   // Fill out ethernet frame header.
 
   // Ethernet frame length = ethernet data (IP header + TCP header)
-  frame_length = IP6_HDRLEN + TCP_HDRLEN + datalen;
+  frame_length = IP6_HDRLEN + TCP_HDRLEN;
 
   // IPv6 header
   memcpy (ether_frame, &iphdr, IP6_HDRLEN * sizeof (uint8_t));
 
   // TCP header
   memcpy (ether_frame + IP6_HDRLEN, &tcphdr, TCP_HDRLEN * sizeof (uint8_t));
-
-  // TCP payload
-  memcpy(ether_frame + IP6_HDRLEN + TCP_HDRLEN,  data, datalen * sizeof (uint8_t));
-
 
   // Open raw socket descriptor.
   if ((sd = socket (PF_PACKET, SOCK_DGRAM, htons (ETH_P_ALL))) < 0) {
@@ -298,199 +276,183 @@ main (int argc, char **argv)
 
   return (EXIT_SUCCESS);
 }
+
 // Computing the internet checksum (RFC 1071).
 // Note that the internet checksum does not preclude collisions.
 uint16_t
 checksum (uint16_t *addr, int len)
 {
-    int count = len;
-    register uint32_t sum = 0;
-    uint16_t answer = 0;
+  int count = len;
+  register uint32_t sum = 0;
+  uint16_t answer = 0;
 
-    // Sum up 2-byte values until none or only one byte left.
-    while (count > 1) {
-        sum += *(addr++);
-        count -= 2;
-    }
+  // Sum up 2-byte values until none or only one byte left.
+  while (count > 1) {
+    sum += *(addr++);
+    count -= 2;
+  }
 
-    // Add left-over byte, if any.
-    if (count > 0) {
-        sum += *(uint8_t *) addr;
-    }
+  // Add left-over byte, if any.
+  if (count > 0) {
+    sum += *(uint8_t *) addr;
+  }
 
-    // Fold 32-bit sum into 16 bits; we lose information by doing this,
-    // increasing the chances of a collision.
-    // sum = (lower 16 bits) + (upper 16 bits shifted right 16 bits)
-    while (sum >> 16) {
-        sum = (sum & 0xffff) + (sum >> 16);
-    }
+  // Fold 32-bit sum into 16 bits; we lose information by doing this,
+  // increasing the chances of a collision.
+  // sum = (lower 16 bits) + (upper 16 bits shifted right 16 bits)
+  while (sum >> 16) {
+    sum = (sum & 0xffff) + (sum >> 16);
+  }
 
-    // Checksum is one's compliment of sum.
-    answer = ~sum;
+  // Checksum is one's compliment of sum.
+  answer = ~sum;
 
-    return (answer);
+  return (answer);
 }
 
 // Build IPv6 TCP pseudo-header and call checksum function (Section 8.1 of RFC 2460).
 uint16_t
-tcp6_checksum (struct ip6_hdr iphdr, struct tcphdr tcphdr, uint8_t *payload, int payloadlen)
+tcp6_checksum (struct ip6_hdr iphdr, struct tcphdr tcphdr)
 {
-    uint32_t lvalue;
-    char buf[IP_MAXPACKET], cvalue;
-    char *ptr;
-    int i, chksumlen = 0;
+  uint32_t lvalue;
+  char buf[IP_MAXPACKET], cvalue;
+  char *ptr;
+  int chksumlen = 0;
 
-    ptr = &buf[0];  // ptr points to beginning of buffer buf
+  ptr = &buf[0];  // ptr points to beginning of buffer buf
 
-    // Copy source IP address into buf (128 bits)
-    memcpy (ptr, &iphdr.ip6_src, sizeof (iphdr.ip6_src));
-    ptr += sizeof (iphdr.ip6_src);
-    chksumlen += sizeof (iphdr.ip6_src);
+  // Copy source IP address into buf (128 bits)
+  memcpy (ptr, &iphdr.ip6_src, sizeof (iphdr.ip6_src));
+  ptr += sizeof (iphdr.ip6_src);
+  chksumlen += sizeof (iphdr.ip6_src);
 
-    // Copy destination IP address into buf (128 bits)
-    memcpy (ptr, &iphdr.ip6_dst, sizeof (iphdr.ip6_dst));
-    ptr += sizeof (iphdr.ip6_dst);
-    chksumlen += sizeof (iphdr.ip6_dst);
+  // Copy destination IP address into buf (128 bits)
+  memcpy (ptr, &iphdr.ip6_dst, sizeof (iphdr.ip6_dst));
+  ptr += sizeof (iphdr.ip6_dst);
+  chksumlen += sizeof (iphdr.ip6_dst);
 
-    // Copy TCP length to buf (32 bits)
-    lvalue = htonl (sizeof (tcphdr) + payloadlen);
-    memcpy (ptr, &lvalue, sizeof (lvalue));
-    ptr += sizeof (lvalue);
-    chksumlen += sizeof (lvalue);
+  // Copy TCP length to buf (32 bits)
+  lvalue = htonl (sizeof (tcphdr));
+  memcpy (ptr, &lvalue, sizeof (lvalue));
+  ptr += sizeof (lvalue);
+  chksumlen += sizeof (lvalue);
 
-    // Copy zero field to buf (24 bits)
-    *ptr = 0; ptr++;
-    *ptr = 0; ptr++;
-    *ptr = 0; ptr++;
-    chksumlen += 3;
+  // Copy zero field to buf (24 bits)
+  *ptr = 0; ptr++;
+  *ptr = 0; ptr++;
+  *ptr = 0; ptr++;
+  chksumlen += 3;
 
-    // Copy next header field to buf (8 bits)
-    memcpy (ptr, &iphdr.ip6_nxt, sizeof (iphdr.ip6_nxt));
-    ptr += sizeof (iphdr.ip6_nxt);
-    chksumlen += sizeof (iphdr.ip6_nxt);
+  // Copy next header field to buf (8 bits)
+  memcpy (ptr, &iphdr.ip6_nxt, sizeof (iphdr.ip6_nxt));
+  ptr += sizeof (iphdr.ip6_nxt);
+  chksumlen += sizeof (iphdr.ip6_nxt);
 
-    // Copy TCP source port to buf (16 bits)
-    memcpy (ptr, &tcphdr.th_sport, sizeof (tcphdr.th_sport));
-    ptr += sizeof (tcphdr.th_sport);
-    chksumlen += sizeof (tcphdr.th_sport);
+  // Copy TCP source port to buf (16 bits)
+  memcpy (ptr, &tcphdr.th_sport, sizeof (tcphdr.th_sport));
+  ptr += sizeof (tcphdr.th_sport);
+  chksumlen += sizeof (tcphdr.th_sport);
 
-    // Copy TCP destination port to buf (16 bits)
-    memcpy (ptr, &tcphdr.th_dport, sizeof (tcphdr.th_dport));
-    ptr += sizeof (tcphdr.th_dport);
-    chksumlen += sizeof (tcphdr.th_dport);
+  // Copy TCP destination port to buf (16 bits)
+  memcpy (ptr, &tcphdr.th_dport, sizeof (tcphdr.th_dport));
+  ptr += sizeof (tcphdr.th_dport);
+  chksumlen += sizeof (tcphdr.th_dport);
 
-    // Copy sequence number to buf (32 bits)
-    memcpy (ptr, &tcphdr.th_seq, sizeof (tcphdr.th_seq));
-    ptr += sizeof (tcphdr.th_seq);
-    chksumlen += sizeof (tcphdr.th_seq);
+  // Copy sequence number to buf (32 bits)
+  memcpy (ptr, &tcphdr.th_seq, sizeof (tcphdr.th_seq));
+  ptr += sizeof (tcphdr.th_seq);
+  chksumlen += sizeof (tcphdr.th_seq);
 
-    // Copy acknowledgement number to buf (32 bits)
-    memcpy (ptr, &tcphdr.th_ack, sizeof (tcphdr.th_ack));
-    ptr += sizeof (tcphdr.th_ack);
-    chksumlen += sizeof (tcphdr.th_ack);
+  // Copy acknowledgement number to buf (32 bits)
+  memcpy (ptr, &tcphdr.th_ack, sizeof (tcphdr.th_ack));
+  ptr += sizeof (tcphdr.th_ack);
+  chksumlen += sizeof (tcphdr.th_ack);
 
-    // Copy data offset to buf (4 bits) and
-    // copy reserved bits to buf (4 bits)
-    cvalue = (tcphdr.th_off << 4) + tcphdr.th_x2;
-    memcpy (ptr, &cvalue, sizeof (cvalue));
-    ptr += sizeof (cvalue);
-    chksumlen += sizeof (cvalue);
+  // Copy data offset to buf (4 bits) and
+  // copy reserved bits to buf (4 bits)
+  cvalue = (tcphdr.th_off << 4) + tcphdr.th_x2;
+  memcpy (ptr, &cvalue, sizeof (cvalue));
+  ptr += sizeof (cvalue);
+  chksumlen += sizeof (cvalue);
 
-    // Copy TCP flags to buf (8 bits)
-    memcpy (ptr, &tcphdr.th_flags, sizeof (tcphdr.th_flags));
-    ptr += sizeof (tcphdr.th_flags);
-    chksumlen += sizeof (tcphdr.th_flags);
+  // Copy TCP flags to buf (8 bits)
+  memcpy (ptr, &tcphdr.th_flags, sizeof (tcphdr.th_flags));
+  ptr += sizeof (tcphdr.th_flags);
+  chksumlen += sizeof (tcphdr.th_flags);
 
-    // Copy TCP window size to buf (16 bits)
-    memcpy (ptr, &tcphdr.th_win, sizeof (tcphdr.th_win));
-    ptr += sizeof (tcphdr.th_win);
-    chksumlen += sizeof (tcphdr.th_win);
+  // Copy TCP window size to buf (16 bits)
+  memcpy (ptr, &tcphdr.th_win, sizeof (tcphdr.th_win));
+  ptr += sizeof (tcphdr.th_win);
+  chksumlen += sizeof (tcphdr.th_win);
 
-    // Copy TCP checksum to buf (16 bits)
-    // Zero, since we don't know it yet
-    *ptr = 0; ptr++;
-    *ptr = 0; ptr++;
-    chksumlen += 2;
+  // Copy TCP checksum to buf (16 bits)
+  // Zero, since we don't know it yet
+  *ptr = 0; ptr++;
+  *ptr = 0; ptr++;
+  chksumlen += 2;
 
-    // Copy urgent pointer to buf (16 bits)
-    memcpy (ptr, &tcphdr.th_urp, sizeof (tcphdr.th_urp));
-    ptr += sizeof (tcphdr.th_urp);
-    chksumlen += sizeof (tcphdr.th_urp);
+  // Copy urgent pointer to buf (16 bits)
+  memcpy (ptr, &tcphdr.th_urp, sizeof (tcphdr.th_urp));
+  ptr += sizeof (tcphdr.th_urp);
+  chksumlen += sizeof (tcphdr.th_urp);
 
-    // Copy payload to buf
-    memcpy (ptr, payload, payloadlen * sizeof (uint8_t));
-    ptr += payloadlen;
-    chksumlen += payloadlen;
-
-    // Pad to the next 16-bit boundary
-    for (i=0; i<payloadlen%2; i++, ptr++) {
-        *ptr = 0;
-        ptr++;
-        chksumlen++;
-    }
-
-    return checksum ((uint16_t *) buf, chksumlen);
+  return checksum ((uint16_t *) buf, chksumlen);
 }
 
 // Allocate memory for an array of chars.
 char *
 allocate_strmem (int len)
 {
-    void *tmp;
+  void *tmp;
 
-    if (len <= 0) {
-        fprintf (stderr, "ERROR: Cannot allocate memory because len = %i in allocate_strmem().\n", len);
-        exit (EXIT_FAILURE);
-    }
+  if (len <= 0) {
+    fprintf (stderr, "ERROR: Cannot allocate memory because len = %i in allocate_strmem().\n", len);
+    exit (EXIT_FAILURE);
+  }
 
-    tmp = (char *) malloc (len * sizeof (char));
-    if (tmp != NULL) {
-        memset (tmp, 0, len * sizeof (char));
-        return (tmp);
-    } else {
-        fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_strmem().\n");
-        exit (EXIT_FAILURE);
-    }
+  tmp = (char *) malloc (len * sizeof (char));
+  if (tmp != NULL) {
+    memset (tmp, 0, len * sizeof (char));
+    return (tmp);
+  } else {
+    fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_strmem().\n");
+    exit (EXIT_FAILURE);
+  }
 }
 
 // Allocate memory for an array of unsigned chars.
 uint8_t *
 allocate_ustrmem (int len)
 {
-    void *tmp;
+  void *tmp;
 
-    if (len <= 0) {
-        fprintf (stderr, "ERROR: Cannot allocate memory because len = %i in allocate_ustrmem().\n", len);
-        exit (EXIT_FAILURE);
-    }
+  if (len <= 0) {
+    fprintf (stderr, "ERROR: Cannot allocate memory because len = %i in allocate_ustrmem().\n", len);
+    exit (EXIT_FAILURE);
+  }
 
-    tmp = (uint8_t *) malloc (len * sizeof (uint8_t));
-    if (tmp != NULL) {
-        memset (tmp, 0, len * sizeof (uint8_t));
-        return (tmp);
-    } else {
-        fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_ustrmem().\n");
-        exit (EXIT_FAILURE);
-    }
+  tmp = (uint8_t *) malloc (len * sizeof (uint8_t));
+  if (tmp != NULL) {
+    memset (tmp, 0, len * sizeof (uint8_t));
+    return (tmp);
+  } else {
+    fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_ustrmem().\n");
+    exit (EXIT_FAILURE);
+  }
 }
 
 // Allocate memory for an array of ints.
 int *
 allocate_intmem (int len)
 {
-    void *tmp;
+  void *tmp;
 
-    if (len <= 0) {
-        fprintf (stderr, "ERROR: Cannot allocate memory because len = %i in allocate_intmem().\n", len);
-        exit (EXIT_FAILURE);
-    }
-
-    tmp = (int *) malloc (len * sizeof (int));
-    if (tmp != NULL) {
-        memset (tmp, 0, len * sizeof (int));
-        return (tmp);
-    } else {
-        fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_intmem().\n");
-        exit (EXIT_FAILURE);
-    }
+  tmp = (int *) malloc (len * sizeof (int));
+  if (tmp != NULL) {
+    memset (tmp, 0, len * sizeof (int));
+    return (tmp);
+  } else {
+    fprintf (stderr, "ERROR: Cannot allocate memory for array allocate_intmem().\n");
+    exit (EXIT_FAILURE);
+  }
 }
